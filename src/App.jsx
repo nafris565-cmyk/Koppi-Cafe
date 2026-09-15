@@ -1,102 +1,88 @@
 function App() {
-  const myNumber = "94743470005";
-  const waLink = `https://wa.me/${myNumber}?text=Hi%20Nafris!%20I%20saw%20your%20KOPPI%20template`;
-
-  const menu = [
-    { name: "Iced Koppi", price: "Rs. 950", tag: "BEST SELLER", emoji: "🧊" },
-    { name: "Ceylon Latte", price: "Rs. 1100", tag: null, emoji: "☕" },
-    { name: "Kopi Bun", price: "Rs. 450", tag: null, emoji: "🥐" },
-    { name: "Coconut Cold Brew", price: "Rs. 1050", tag: null, emoji: "🥥" },
-    { name: "Milo Dinosaur", price: "Rs. 1200", tag: "NEW", emoji: "🍫" },
-    { name: "Kaya Toast Set", price: "Rs. 800", tag: null, emoji: "🍳" },
-  ];
+  const WA = "94743470005";
+  const waLink = `https://wa.me/${WA}?text=Hi%20Nafris!%20KOPPI%20Template%20Saw`;
 
   return (
     <>
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600;700&display=swap');`}</style>
-      
-      <div style={{ fontFamily: "Inter, sans-serif", background: "#FFFDF9", color: "#111111", minHeight: "100vh" }}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { overflow-x: hidden; }
+      `}</style>
+
+      <div style={{ fontFamily: "Outfit, sans-serif", background: "#FFFEFB", color: "#111", width: "100%", overflowX: "hidden" }}>
         
-        {/* TOP BANNER */}
-        <div style={{ background: "#111111", color: "white", textAlign: "center", padding: "12px", fontSize: "13px", fontWeight: 600, letterSpacing: "0.3px" }}>
-          Template for Sale - Need a similar website? <a href={waLink} style={{ color: "#fff", fontWeight: 800, textDecoration: "underline", marginLeft: "6px" }}>Contact Developer</a>
+        {/* TOP BAR */}
+        <div style={{ background: "#0A0A0A", color: "#fff", textAlign: "center", padding: "12px 16px", fontSize: "13px", fontWeight: 600 }}>
+          TEMPLATE FOR SALE - Need similar website? <a href={waLink} style={{ color: "#fff", fontWeight: 800, marginLeft: "8px" }}>Contact Developer</a>
         </div>
 
         {/* NAV */}
-        <nav style={{ background: "#FFFDF9", borderBottom: "1px solid #EAEAEA", position: "sticky", top: 0, zIndex: 100 }}>
-          <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "20px 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <h2 style={{ fontFamily: "Space Grotesk, sans-serif", fontWeight: 700, margin: 0, fontSize: "24px", letterSpacing: "-1px" }}>KOPPI.</h2>
-            <a href={waLink} style={{ background: "#111111", color: "#fff", padding: "11px 22px", borderRadius: "100px", textDecoration: "none", fontWeight: 700, fontSize: "13px" }}>Order Demo</a>
+        <div style={{ width: "100%", borderBottom: "1px solid #F0EDE8", background: "#FFFEFB", position: "sticky", top: 0, zIndex: 50 }}>
+          <div style={{ maxWidth: "1120px", margin: "0 auto", padding: "18px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <div style={{ fontWeight: 900, fontSize: "26px", letterSpacing: "-1px" }}>KOPPI.</div>
+            <a href={waLink} style={{ background: "#111", color: "#fff", padding: "10px 20px", borderRadius: "100px", textDecoration: "none", fontWeight: 700, fontSize: "13px" }}>Order Now</a>
           </div>
-        </nav>
+        </div>
 
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
-          
-          {/* HERO - 100% VISIBLE FIXED */}
-          <div style={{ padding: "90px 0 70px" }}>
-            <h1 style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: "clamp(44px, 8vw, 84px)", fontWeight: 700, lineHeight: 0.9, margin: 0, color: "#111111", letterSpacing: "-3px" }}>
+        {/* MAIN CONTAINER - NO HIDE GUARANTEE */}
+        <div style={{ maxWidth: "1120px", margin: "0 auto", padding: "0 20px", width: "100%" }}>
+
+          {/* HERO - FIXED */}
+          <div style={{ padding: "60px 0 50px", width: "100%" }}>
+            <h1 style={{ fontSize: "clamp(36px, 9vw, 82px)", fontWeight: 900, lineHeight: "0.9", letterSpacing: "-2px", color: "#111", wordBreak: "break-word" }}>
               Colombo's<br />Finest Brew.
             </h1>
-            <p style={{ fontSize: "18px", color: "#666666", marginTop: "24px", lineHeight: 1.6, maxWidth: "460px", fontWeight: 400 }}>
-              Hand-roasted beans, slow-brewed love. This is a premium cafe template designed for modern businesses.
+            <p style={{ fontSize: "16px", color: "#6B6B6B", marginTop: "20px", lineHeight: "1.6", maxWidth: "440px" }}>
+              Hand-roasted beans, slow-brewed love. Premium cafe template built for modern businesses.
             </p>
-            <div style={{ marginTop: "36px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
-              <a href={waLink} style={{ background: "#111111", color: "#fff", padding: "15px 30px", borderRadius: "100px", textDecoration: "none", fontWeight: 700, fontSize: "14px" }}>Get This Website</a>
-              <a href="#menu" style={{ border: "2px solid #111111", padding: "15px 30px", borderRadius: "100px", background: "#fff", color: "#111111", fontWeight: 700, fontSize: "14px", textDecoration: "none" }}>View Menu</a>
+            <div style={{ marginTop: "28px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
+              <a href={waLink} style={{ background: "#111", color: "#fff", padding: "14px 26px", borderRadius: "100px", textDecoration: "none", fontWeight: 700, fontSize: "14px" }}>Get This Website</a>
+              <a href="#menu" style={{ background: "#fff", border: "2px solid #111", color: "#111", padding: "14px 26px", borderRadius: "100px", textDecoration: "none", fontWeight: 700, fontSize: "14px" }}>View Menu</a>
             </div>
           </div>
 
-          {/* MENU */}
-          <div id="menu" style={{ padding: "20px 0 40px" }}>
-            <h2 style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: "36px", fontWeight: 700, color: "#111111", margin: "0 0 8px 0", letterSpacing: "-1px" }}>Our Menu</h2>
-            <p style={{ color: "#999999", margin: "0 0 32px 0", fontSize: "14px", fontWeight: 600 }}>DEMO MENU - FULLY CUSTOMIZABLE</p>
+          {/* MENU - SIMPLE GRID NO OVERFLOW */}
+          <div id="menu" style={{ padding: "20px 0 40px", width: "100%" }}>
+            <h2 style={{ fontSize: "28px", fontWeight: 800, color: "#111" }}>Our Menu</h2>
+            <p style={{ color: "#999", fontSize: "13px", marginTop: "6px", marginBottom: "20px", fontWeight: 600 }}>DEMO - FULLY CUSTOMIZABLE</p>
             
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "20px" }}>
-              {menu.map((item) => (
-                <div key={item.name} style={{ background: "#FFFFFF", borderRadius: "24px", border: "1px solid #EAEAEA", overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
-                  <div style={{ background: "#F7EEDD", height: "140px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "48px", position: "relative" }}>
-                    {item.emoji}
-                    {item.tag && <span style={{ position: "absolute", top: "14px", left: "14px", background: "#111111", color: "#fff", fontSize: "10px", padding: "6px 12px", borderRadius: "100px", fontWeight: 800, letterSpacing: "0.5px" }}>{item.tag}</span>}
-                  </div>
-                  <div style={{ padding: "20px 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "16px", width: "100%" }}>
+              {[
+                { n: "Iced Koppi", p: "Rs. 950", e: "🧊", t: "BEST SELLER" },
+                { n: "Ceylon Latte", p: "Rs. 1100", e: "☕", t: null },
+                { n: "Kopi Bun", p: "Rs. 450", e: "🥐", t: null },
+                { n: "Coconut Brew", p: "Rs. 1050", e: "🥥", t: null },
+                { n: "Milo Dinosaur", p: "Rs. 1200", e: "🍫", t: "NEW" },
+                { n: "Kaya Toast", p: "Rs. 800", e: "🍳", t: null },
+              ].map((m) => (
+                <div key={m.n} style={{ background: "#fff", border: "1px solid #F0EDE8", borderRadius: "20px", padding: "18px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div style={{ display: "flex", gap: "14px", alignItems: "center" }}>
+                    <div style={{ width: "48px", height: "48px", background: "#FFF3E0", borderRadius: "14px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "22px" }}>{m.e}</div>
                     <div>
-                      <h3 style={{ margin: "0 0 4px 0", fontSize: "16px", fontWeight: 700, color: "#111111" }}>{item.name}</h3>
-                      <p style={{ margin: 0, fontWeight: 700, fontSize: "14px", color: "#111111" }}>{item.price}</p>
+                      <div style={{ fontWeight: 700, fontSize: "15px", color: "#111" }}>{m.n} {m.t && <span style={{ fontSize: "9px", background: "#111", color: "#fff", padding: "3px 7px", borderRadius: "20px", marginLeft: "6px", verticalAlign: "middle" }}>{m.t}</span>}</div>
+                      <div style={{ fontSize: "13px", color: "#888", marginTop: "2px" }}>{m.p}</div>
                     </div>
-                    <div style={{ width: "36px", height: "36px", background: "#111111", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontWeight: 700 }}>+</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* DEVELOPER CARD - PROFESSIONAL ENGLISH ONLY */}
-          <div style={{ marginTop: "90px", background: "#111111", borderRadius: "28px", padding: "50px 32px", color: "white", textAlign: "center" }}>
-            <p style={{ margin: 0, fontSize: "11px", letterSpacing: "3px", color: "#888888", fontWeight: 700 }}>DESIGNED & DEVELOPED BY</p>
-            <h2 style={{ fontFamily: "Space Grotesk, sans-serif", fontSize: "40px", fontWeight: 700, margin: "16px 0 8px 0", letterSpacing: "-1px" }}>Nafris. JM</h2>
-            <p style={{ color: "#AAAAAA", fontSize: "15px", margin: 0, fontWeight: 600 }}>Web Designer from Sammanthurai, Ampara District</p>
-            <p style={{ color: "#AAAAAA", fontSize: "15px", margin: "6px 0 0 0", fontWeight: 600 }}>WhatsApp: 0743470005 | Sri Lanka</p>
-            
-            <p style={{ color: "#CCCCCC", fontSize: "15px", maxWidth: "520px", margin: "28px auto 0 auto", lineHeight: 1.7, fontWeight: 400 }}>
-              I build fast, modern, professional websites for cafes, shops and small businesses. 
-              This KOPPI template is 100% customizable for your brand.
-            </p>
-
-            <div style={{ marginTop: "32px" }}>
-              <a href={waLink} style={{ background: "#25D366", color: "white", padding: "16px 36px", borderRadius: "100px", textDecoration: "none", fontWeight: 800, fontSize: "15px", display: "inline-block" }}>Contact on WhatsApp</a>
+          {/* DEVELOPER - ALL DETAILS */}
+          <div style={{ marginTop: "50px", marginBottom: "40px", background: "#111", borderRadius: "24px", padding: "36px 24px", textAlign: "center", color: "white", width: "100%" }}>
+            <div style={{ fontSize: "10px", letterSpacing: "3px", color: "#777", fontWeight: 700 }}>DESIGNED & DEVELOPED BY</div>
+            <div style={{ fontSize: "32px", fontWeight: 900, marginTop: "12px", letterSpacing: "-1px" }}>Nafris. JM</div>
+            <div style={{ color: "#aaa", fontSize: "14px", marginTop: "8px" }}>Sammanthurai, Ampara District, Sri Lanka</div>
+            <div style={{ color: "#aaa", fontSize: "14px", marginTop: "4px" }}>WhatsApp: 0743470005</div>
+            <div style={{ color: "#ccc", fontSize: "14px", maxWidth: "460px", margin: "18px auto 0 auto", lineHeight: 1.6 }}>
+              I build fast, modern websites for cafes, shops & small businesses. Starting from Rs. 25,000.
             </div>
-            
-            <div style={{ marginTop: "24px", display: "flex", gap: "20px", justifyContent: "center", color: "#666666", fontSize: "12px", fontWeight: 600, flexWrap: "wrap" }}>
-              <span>STARTING FROM Rs. 25,000</span>
-              <span>•</span>
-              <span>3 DAYS DELIVERY</span>
-              <span>•</span>
-              <span>FREE HOSTING</span>
-            </div>
+            <a href={waLink} style={{ display: "inline-block", marginTop: "22px", background: "#25D366", color: "white", padding: "14px 32px", borderRadius: "100px", textDecoration: "none", fontWeight: 800, fontSize: "14px" }}>Contact on WhatsApp</a>
           </div>
 
-          <div style={{ padding: "50px 0", textAlign: "center", color: "#BBBBBB", fontSize: "12px", fontWeight: 600, letterSpacing: "0.5px" }}>
-            © 2026 KOPPI Cafe Template • Built by <span style={{ color: "#111111" }}>Nafris. JM</span> • Sammanthurai, Ampara
+          <div style={{ textAlign: "center", padding: "20px 0 40px", color: "#bbb", fontSize: "11px" }}>
+            © 2026 KOPPI Template • Built by Nafris. JM
           </div>
         </div>
       </div>
